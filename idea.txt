@@ -1,0 +1,25 @@
+ MYSQL Typeorm
+
+User
+
+Product 
+
+Order
+
+Seller Role → 
+
+Authentication → Login, Logout, Reset Password
+
+Login Vaisakepaxi Token → Product Create, Get Product By Id, Get All Product, Update Product
+
+Redis Database to Retrieve The  Get ALL Product API Only
+
+Buyer Role → 
+
+Authentication → Login, Logout, Reset Password
+
+Login Vaisakepaxi Token → Get All Product Redis, Purchase Product 
+
+Purchase gareko product auta Order table ma save garnu paryo
+
+→ Get All User Orders 
