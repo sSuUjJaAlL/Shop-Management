@@ -1,5 +1,5 @@
 import { Application } from "express";
-import getRequestrouter from "./logi.router";
+import getRequestrouter from "./login.router";
 
 async function getserverRouter(app:Application){
     app.use('/api/v1',[

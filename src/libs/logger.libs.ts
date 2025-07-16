@@ -25,5 +25,5 @@ function createLogger(service:string):winston.Logger{
         
     });
 }
-const routineLogger= createLogger('Shop management');
-export default routineLogger
+const managementLogger= createLogger('Shop management');
+export default managementLogger

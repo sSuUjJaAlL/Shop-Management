@@ -7,6 +7,7 @@ import SingletonDatabaseConnection from "./database/connect";
 import { DataSource } from "typeorm";
 import getserverRouter from "./router/server.router";
 import routineLogger from "./libs/logger.libs";
+import managementLogger from "./libs/logger.libs";
 
 export default class Server{
     
@@ -42,14 +43,14 @@ export default class Server{
         await this.getMiddleware()
         await this.getServerRouter()
         await this.connecttoDatabase()
-        console.log(`Database successfully connected on ${getvar('DB_PORT')} port `)
+        managementLogger.info(`Database successfully connected on ${getvar('DB_PORT')} port `)
         try{
             this.app.listen(this.port,()=>{
-                routineLogger.info(`App is successfully running on ${getvar('PORT')} port`)
+                managementLogger.info(`App is successfully running on ${getvar('PORT')} port`)
             })
         }
         catch(err){
-            console.log("Error while starting the server")
+            managementLogger.error("Error while starting the server")
 
         }
 
